@@ -18,10 +18,19 @@ status](https://codecov.io/gh/tadaadata/artyfarty/branch/master/graph/badge.svg)
 ## Fork notice
 
 The original package has not been in active development for \>= 2 years,
-and since then, some things have changes. This fork aims to bring the
+and since then some things have changed. This fork aims to bring the
 themes up to speed with regard to missing features, like setting
 fonts/colors for the `subtitle` ggplot2 elements missing in the original
 package.
+
+### Goals
+
+  - Make all themes work with ggplot2 features currently missing
+    (subtitle, caption). See
+    [\#1](https://github.com/tadaadata/artyfarty/issues/1)
+  - Convert manual palettes (`pal()`) to proper
+    `scale_[color|fill]_palette` functions. The idea is to be consistent
+    with theme packages like `hrbthemes` (\<3)
 
 ## Installation
 
