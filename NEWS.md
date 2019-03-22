@@ -8,7 +8,8 @@ This is now a fork of [datarootsio/artyfarty](https://github.com/datarootsio/art
     - `news_md()`
     - `tidy_style()`
     - `code_of_conduct()`
-    - `use_pipe()`
+    - `pipe()`
+    - `coverage()`
 - Change up `.travis.yml`
 
 

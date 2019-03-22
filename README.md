@@ -16,15 +16,6 @@ release](https://img.shields.io/github/release/tadaadata/artyfarty.svg?logo=GitH
 
 </div>
 
-`artyfarty` is a collection of ggplot themes published by
-[dataroots](http://dataroots.io).
-
-For more info, please check out the examples and documentation
-[here](https://datarootsio.github.io/artyfarty).
-
-An introductory vignette can be found
-[here](https://datarootsio.github.io/artyfarty/articles/introduction.html)
-
 ## Fork notice
 
 The original package has not been in active development for \>= 2 years,
@@ -48,3 +39,14 @@ remotes::install_github("tadaadata/artyfarty")
 Please note that the \[34m’artyfarty’\[39m project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
 this project, you agree to abide by its terms.
+
+## Original README
+
+`artyfarty` is a collection of ggplot themes published by
+[dataroots](http://dataroots.io).
+
+For more info, please check out the examples and documentation
+[here](https://datarootsio.github.io/artyfarty).
+
+An introductory vignette can be found
+[here](https://datarootsio.github.io/artyfarty/articles/introduction.html)
