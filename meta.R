@@ -22,15 +22,3 @@ devtools::build_readme(quiet = TRUE); fs::file_delete("README.html")
 devtools::build_vignettes(clean = TRUE)
 pkgdown::build_site(run_dont_run = TRUE, preview = TRUE)
 
-# Visual test cases ----
-library(ggplot2)
-
-p <- ggplot(data = mtcars, aes(x = hp, y = mpg, color = cyl)) +
-  geom_point() +
-  labs(title = "Plot title",
-       subtitle = "Plot subtitle",
-       caption = "Caption",
-       x = "X axis text", y = "Y axis text")
-
-p + theme_monokai()
-p + theme_monokai_full()
