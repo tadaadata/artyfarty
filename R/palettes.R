@@ -1,8 +1,8 @@
 utils::globalVariables(c("k", "name"))
 
-PALETTES <- (function(filename){
+PALETTES <- (function(filename) {
   pals <- jsonlite::fromJSON(filename)
-  for(p_name in names(pals)){
+  for (p_name in names(pals)) {
     pals[[p_name]]$name <- p_name
     pals[[p_name]]$size <- length(pals[[p_name]]$colors)
   }
@@ -16,10 +16,11 @@ PALETTES <- (function(filename){
 #'
 #' @export
 #' @examples
-#' palette_info('flatpaleta')
-palette_info <- function(palette_name){
-  if(!palette_name %in% names(PALETTES))
+#' palette_info("flatpaleta")
+palette_info <- function(palette_name) {
+  if (!palette_name %in% names(PALETTES)) {
     stop(paste0("Requested palette '", palette_name, "' not found in artyfarty library"))
+  }
 
   PALETTES[[palette_name]]
 }
@@ -27,10 +28,10 @@ palette_info <- function(palette_name){
 #' List all available palettes
 #'
 #' @export
-list_palettes <- function(){
+list_palettes <- function() {
   cat("Available artyfarty palettes:\n")
   cat("----------------------------\n")
-  for(p in names(PALETTES)){
+  for (p in names(PALETTES)) {
     cat(p, "\n")
   }
 
@@ -48,26 +49,28 @@ list_palettes <- function(){
 #'
 #' @return a character vector of hex colors
 #' @export
-pal <- function(palette_name, n=NULL, evenly_spaced=TRUE){
-  if(palette_name %in% rownames(RColorBrewer::brewer.pal.info)){
+pal <- function(palette_name, n = NULL, evenly_spaced = TRUE) {
+  if (palette_name %in% rownames(RColorBrewer::brewer.pal.info)) {
     p <- RColorBrewer::brewer.pal(
       RColorBrewer::brewer.pal.info[rownames(RColorBrewer::brewer.pal.info) == palette_name, "maxcolors"],
-      palette_name)
+      palette_name
+    )
 
     return(p)
   }
 
-  if(!palette_name %in% names(PALETTES))
+  if (!palette_name %in% names(PALETTES)) {
     stop(paste0("Requested palette '", palette_name, "' not found"))
+  }
 
-  p<-PALETTES[[palette_name]]$colors
+  p <- PALETTES[[palette_name]]$colors
 
 
-  if(!is.null(n)){
-    if(evenly_spaced & n < length(p)){
-      p<-p[round(seq.int(1, length(p), length.out = n))]
+  if (!is.null(n)) {
+    if (evenly_spaced & n < length(p)) {
+      p <- p[round(seq.int(1, length(p), length.out = n))]
     } else {
-      p<-rep(p, length.out = n)
+      p <- rep(p, length.out = n)
     }
   }
 
@@ -78,29 +81,29 @@ pal <- function(palette_name, n=NULL, evenly_spaced=TRUE){
 #'
 #' @return ggplot2 object
 #' @export
-plot_palettes<-function(){
-
-  all_cols<-
+plot_palettes <- function() {
+  all_cols <-
     sapply(PALETTES, function(p) {
       c(p$name, p$colors)
     })
 
   max_cols <- max(sapply(all_cols, function(p) length(p)))
-  m <- matrix(nrow=NROW(all_cols), ncol=max_cols)
+  m <- matrix(nrow = NROW(all_cols), ncol = max_cols)
 
-  for(i in 1:NROW(all_cols)){
-    m[i,] <- c(all_cols[[i]], rep(NA, max_cols - (length(all_cols[[i]]))))
+  for (i in 1:NROW(all_cols)) {
+    m[i, ] <- c(all_cols[[i]], rep(NA, max_cols - (length(all_cols[[i]]))))
   }
 
   colnames(m) <-
     c("name", sapply(1:(NCOL(m) - 1), function(i) i))
 
-  df<-
+  df <-
     tidyr::gather(
-      as.data.frame(m, stringsAsFactors=FALSE),
-      k, col, 2:NCOL(m))
+      as.data.frame(m, stringsAsFactors = FALSE),
+      k, col, 2:NCOL(m)
+    )
 
-  df<-
+  df <-
     dplyr::mutate(df, k = as.numeric(k))
 
   col <- df$col
@@ -108,14 +111,15 @@ plot_palettes<-function(){
 
 
   ggplot(df) +
-    aes(x=as.factor(k), y=name, fill=col) +
+    aes(x = as.factor(k), y = name, fill = col) +
     geom_tile() +
-    scale_fill_manual(values=col) +
+    scale_fill_manual(values = col) +
     theme_bw() +
-    labs(x="color",
-         y="palette_name",
-         title="Available palettes") +
+    labs(
+      x = "color",
+      y = "palette_name",
+      title = "Available palettes"
+    ) +
     theme_empty() +
-    theme(legend.position="none")
-
+    theme(legend.position = "none")
 }

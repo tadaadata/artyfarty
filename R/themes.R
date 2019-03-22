@@ -4,37 +4,37 @@
 #'
 #' @return theme
 #' @export
-theme_dataroots <- function(){
-  palette <- c("#FFFFFF", "#F0F0F0", "#D9D9D9", "#BDBDBD", "#52BE7F", "#737373",
-               "#525252", "#252525", "#000000") # = brewer.pal 'greys'
-  color.background = palette[2]
-  color.grid.major = palette[5]
-  color.axis.text = palette[6]
-  color.axis.title = palette[7]
-  color.title = palette[5]
-  color.axis = palette[5]
+theme_dataroots <- function() {
+  palette <- c(
+    "#FFFFFF", "#F0F0F0", "#D9D9D9", "#BDBDBD", "#52BE7F", "#737373",
+    "#525252", "#252525", "#000000"
+  ) # = brewer.pal 'greys'
+  color.background <- palette[2]
+  color.grid.major <- palette[5]
+  color.axis.text <- palette[6]
+  color.axis.title <- palette[7]
+  color.title <- palette[5]
+  color.axis <- palette[5]
 
-  theme_bw(base_size=12) +
+  theme_bw(base_size = 12) +
     theme(
+      panel.border = element_rect(color = color.background),
 
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid.major, size = .25, linetype = 3),
+      panel.grid.minor = element_blank(),
+      axis.line.x = element_line(color = color.axis, size = 1),
+      axis.line.y = element_line(color = color.axis, size = 1),
+      axis.ticks = element_blank(),
 
-      panel.grid.major=element_line(color=color.grid.major,size=.25, linetype=3),
-      panel.grid.minor=element_blank(),
-      axis.line.x=element_line(color=color.axis, size=1),
-      axis.line.y=element_line(color=color.axis, size=1),
-      axis.ticks=element_blank(),
+      legend.key = element_rect(fill = NA, color = NA),
+      legend.text = element_text(size = rel(.8), color = color.axis.title),
 
-      legend.key = element_rect(fill=NA, color=NA),
-      legend.text = element_text(size=rel(.8),color=color.axis.title),
-
-      plot.title=element_text(color=color.title, size=rel(1.4),  face="bold", vjust=0),
-      axis.text.x=element_text(size=rel(1),color=color.axis.text),
-      axis.text.y=element_text(size=rel(1),color=color.axis.text),
-      axis.title.x=element_text(size=rel(.9),color=color.axis.title, vjust=0),
-      axis.title.y=element_text(size=rel(.9),color=color.axis.title, vjust=1.25)
+      plot.title = element_text(color = color.title, size = rel(1.4), face = "bold", vjust = 0),
+      axis.text.x = element_text(size = rel(1), color = color.axis.text),
+      axis.text.y = element_text(size = rel(1), color = color.axis.text),
+      axis.title.x = element_text(size = rel(.9), color = color.axis.title, vjust = 0),
+      axis.title.y = element_text(size = rel(.9), color = color.axis.title, vjust = 1.25)
     )
-
 }
 
 
@@ -45,39 +45,39 @@ theme_dataroots <- function(){
 #' @return theme
 #' @import ggplot2 grid
 #' @export
-theme_farty <- function(){
-  palette <- c("#FFFFFF", "#F0F0F0", "#D9D9D9", "#BDBDBD", "#969696", "#737373",
-               "#525252", "#252525", "#000000") # = brewer.pal 'greys'
-  color.background = palette[2]
-  color.grid.major = palette[3]
-  color.axis.text = palette[6]
-  color.axis.title = palette[7]
-  color.title = palette[9]
+theme_farty <- function() {
+  palette <- c(
+    "#FFFFFF", "#F0F0F0", "#D9D9D9", "#BDBDBD", "#969696", "#737373",
+    "#525252", "#252525", "#000000"
+  ) # = brewer.pal 'greys'
+  color.background <- palette[2]
+  color.grid.major <- palette[3]
+  color.axis.text <- palette[6]
+  color.axis.title <- palette[7]
+  color.title <- palette[9]
 
-  theme_bw(base_size=12) +
+  theme_bw(base_size = 12) +
     theme(
+      panel.background = element_rect(fill = color.background, color = color.background),
+      plot.background = element_rect(fill = color.background, color = color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.background=element_rect(fill=color.background, color=color.background),
-      plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid.major, size = .25),
+      panel.grid.minor = element_blank(),
+      axis.ticks = element_blank(),
 
-      panel.grid.major=element_line(color=color.grid.major,size=.25),
-      panel.grid.minor=element_blank(),
-      axis.ticks=element_blank(),
+      legend.background = element_rect(fill = color.background),
+      legend.key = element_rect(fill = color.background, color = NA),
+      legend.text = element_text(size = 7, color = color.axis.title),
 
-      legend.background = element_rect(fill=color.background),
-      legend.key = element_rect(fill=color.background, color=NA),
-      legend.text = element_text(size=7,color=color.axis.title),
-
-      plot.title=element_text(color=color.title, size=rel(1.3), hjust=.5),
-      axis.text.x=element_text(size=rel(.9), color=color.axis.text),
-      axis.text.y=element_text(size=rel(.9), color=color.axis.text),
-      axis.title.x=element_text(size=rel(1), color=color.axis.title, vjust=0),
-      axis.title.y=element_text(size=rel(1), color=color.axis.title, vjust=1.25),
+      plot.title = element_text(color = color.title, size = rel(1.3), hjust = .5),
+      axis.text.x = element_text(size = rel(.9), color = color.axis.text),
+      axis.text.y = element_text(size = rel(.9), color = color.axis.text),
+      axis.title.x = element_text(size = rel(1), color = color.axis.title, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.axis.title, vjust = 1.25),
 
       plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm")
     )
-
 }
 
 
@@ -89,46 +89,43 @@ theme_farty <- function(){
 #'
 #' @return theme
 #' @export
-theme_five38 <- function(grid_lines = "vertical"){
+theme_five38 <- function(grid_lines = "vertical") {
+  color.background <- "#F0F0F0"
+  color.grid.major <- "#D3D3D3"
+  color.text <- "#181818"
 
-  color.background = "#F0F0F0"
-  color.grid.major = "#D3D3D3"
-  color.text = "#181818"
-
-  if(grid_lines == "vertical"){
-    grid.major.x = element_blank()
-    grid.major.y = element_line()
+  if (grid_lines == "vertical") {
+    grid.major.x <- element_blank()
+    grid.major.y <- element_line()
   } else {
-    grid.major.x = element_line()
-    grid.major.y = element_blank()
+    grid.major.x <- element_line()
+    grid.major.y <- element_blank()
   }
 
-  theme_bw(base_size=13, base_family = fonts_selector("Helvetica","Arial", "sans", "sans-serif")) +
+  theme_bw(base_size = 13, base_family = fonts_selector("Helvetica", "Arial", "sans", "sans-serif")) +
     theme(
+      panel.background = element_rect(fill = color.background, color = color.background),
+      plot.background = element_rect(fill = color.background, color = color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.background=element_rect(fill=color.background, color=color.background),
-      plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid.major, size = .25),
+      panel.grid.major.x = grid.major.x,
+      panel.grid.major.y = grid.major.y,
+      panel.grid.minor = element_blank(),
+      axis.ticks = element_blank(),
 
-      panel.grid.major=element_line(color=color.grid.major,size=.25),
-      panel.grid.major.x=grid.major.x,
-      panel.grid.major.y=grid.major.y,
-      panel.grid.minor=element_blank(),
-      axis.ticks=element_blank(),
+      legend.background = element_rect(fill = color.background),
+      legend.key = element_rect(fill = color.background, color = NA),
+      legend.text = element_text(size = rel(.8), color = color.text),
 
-      legend.background = element_rect(fill=color.background),
-      legend.key = element_rect(fill=color.background, color=NA),
-      legend.text = element_text(size=rel(.8),color=color.text),
-
-      plot.title=element_text(color=color.text, size=rel(1.2), hjust=.5),
-      axis.text.x=element_text(size=rel(.95),color=color.text),
-      axis.text.y=element_text(size=rel(.95),color=color.text, face="bold"),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25),
+      plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
+      axis.text.x = element_text(size = rel(.95), color = color.text),
+      axis.text.y = element_text(size = rel(.95), color = color.text, face = "bold"),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25),
 
       plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm")
     )
-
 }
 
 
@@ -140,48 +137,45 @@ theme_five38 <- function(grid_lines = "vertical"){
 #'
 #' @return theme
 #' @export
-theme_ft <- function(grid_lines = "vertical"){
+theme_ft <- function(grid_lines = "vertical") {
+  color.background <- "#FFF1E0"
+  color.grid.major <- "#D3D3D3"
+  color.text <- "#181818"
+  color.background.legend <- "#F6E9D8"
 
-  color.background = "#FFF1E0"
-  color.grid.major = "#D3D3D3"
-  color.text = "#181818"
-  color.background.legend = "#F6E9D8"
-
-  if(grid_lines == "vertical"){
-    grid.major.x = element_blank()
-    grid.major.y = element_line()
+  if (grid_lines == "vertical") {
+    grid.major.x <- element_blank()
+    grid.major.y <- element_line()
   } else {
-    grid.major.x = element_line()
-    grid.major.y = element_blank()
+    grid.major.x <- element_line()
+    grid.major.y <- element_blank()
   }
 
-  theme_bw(base_size=13, base_family = fonts_selector("Times New Roman", "Times", "serif")) +
+  theme_bw(base_size = 13, base_family = fonts_selector("Times New Roman", "Times", "serif")) +
     theme(
+      panel.background = element_rect(fill = color.background, color = color.background),
+      plot.background = element_rect(fill = color.background, color = color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.background=element_rect(fill=color.background, color=color.background),
-      plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid.major, size = .25),
+      panel.grid.major.x = grid.major.x,
+      panel.grid.major.y = grid.major.y,
+      panel.grid.minor = element_blank(),
+      axis.ticks = element_blank(),
 
-      panel.grid.major=element_line(color=color.grid.major,size=.25),
-      panel.grid.major.x=grid.major.x,
-      panel.grid.major.y=grid.major.y,
-      panel.grid.minor=element_blank(),
-      axis.ticks=element_blank(),
-
-      legend.background = element_rect(fill=color.background.legend),
-      legend.key = element_rect(fill=color.background, color=color.background),
-      legend.text = element_text(size=rel(.8),color=color.text),
+      legend.background = element_rect(fill = color.background.legend),
+      legend.key = element_rect(fill = color.background, color = color.background),
+      legend.text = element_text(size = rel(.8), color = color.text),
       legend.position = "top",
 
-      plot.title=element_text(color=color.text, size=rel(1.4), face = "bold", hjust=.5),
-      axis.text.x=element_text(size=rel(.9),color=color.text),
-      axis.text.y=element_text(size=rel(.9),color=color.text),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25),
+      plot.title = element_text(color = color.text, size = rel(1.4), face = "bold", hjust = .5),
+      axis.text.x = element_text(size = rel(.9), color = color.text),
+      axis.text.y = element_text(size = rel(.9), color = color.text),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25),
 
       plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm")
     )
-
 }
 
 
@@ -194,57 +188,55 @@ theme_ft <- function(grid_lines = "vertical"){
 #'
 #' @return theme
 #' @export
-theme_economist <- function(grid_lines = "vertical"){
+theme_economist <- function(grid_lines = "vertical") {
+  color.background <- "#D5E2EA"
+  color.grid.major <- "#ECF2F5"
+  color.text <- "#181818"
+  color.axis <- "#181818"
 
-  color.background = "#D5E2EA"
-  color.grid.major = "#ECF2F5"
-  color.text = "#181818"
-  color.axis = "#181818"
-
-  if(grid_lines == "vertical"){
-    grid.major.x = element_blank()
-    grid.major.y = element_line()
-    axis.ticks.y = element_blank()
-    axis.ticks.x = element_line(color=color.axis)
-    axis.line.x = element_line(color=color.axis)
-    axis.line.y = element_blank()
+  if (grid_lines == "vertical") {
+    grid.major.x <- element_blank()
+    grid.major.y <- element_line()
+    axis.ticks.y <- element_blank()
+    axis.ticks.x <- element_line(color = color.axis)
+    axis.line.x <- element_line(color = color.axis)
+    axis.line.y <- element_blank()
   } else {
-    grid.major.x = element_line()
-    grid.major.y = element_blank()
-    axis.ticks.y = element_line(color=color.axis)
-    axis.ticks.x = element_blank()
-    axis.line.x = element_blank()
-    axis.line.y = element_line(color=color.axis)
+    grid.major.x <- element_line()
+    grid.major.y <- element_blank()
+    axis.ticks.y <- element_line(color = color.axis)
+    axis.ticks.x <- element_blank()
+    axis.line.x <- element_blank()
+    axis.line.y <- element_line(color = color.axis)
   }
 
-  theme_bw(base_size=12, base_family = fonts_selector("Verdana", "Geneva", "sans-serif", "sans")) +
+  theme_bw(base_size = 12, base_family = fonts_selector("Verdana", "Geneva", "sans-serif", "sans")) +
     theme(
-      panel.background=element_rect(fill=color.background, color=color.background),
-      plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.background = element_rect(fill = color.background, color = color.background),
+      plot.background = element_rect(fill = color.background, color = color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.grid.major=element_line(color=color.grid.major,size=1.05),
-      panel.grid.major.x=grid.major.x,
-      panel.grid.major.y=grid.major.y,
-      panel.grid.minor=element_blank(),
-      axis.ticks.y=axis.ticks.y,
-      axis.ticks.x=axis.ticks.x,
-      axis.line.x=axis.line.x,
-      axis.line.y=axis.line.y,
+      panel.grid.major = element_line(color = color.grid.major, size = 1.05),
+      panel.grid.major.x = grid.major.x,
+      panel.grid.major.y = grid.major.y,
+      panel.grid.minor = element_blank(),
+      axis.ticks.y = axis.ticks.y,
+      axis.ticks.x = axis.ticks.x,
+      axis.line.x = axis.line.x,
+      axis.line.y = axis.line.y,
 
-      legend.background = element_rect(fill=color.background),
-      legend.key = element_rect(fill=color.background, color=color.background),
-      legend.text = element_text(size=rel(.7), color=color.text),
+      legend.background = element_rect(fill = color.background),
+      legend.key = element_rect(fill = color.background, color = color.background),
+      legend.text = element_text(size = rel(.7), color = color.text),
 
-      plot.title=element_text(color=color.text, size=rel(1.3), face = "bold", hjust=0),
-      axis.text.x=element_text(size=rel(.9),color=color.text),
-      axis.text.y=element_text(size=rel(.9),color=color.text),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25),
+      plot.title = element_text(color = color.text, size = rel(1.3), face = "bold", hjust = 0),
+      axis.text.x = element_text(size = rel(.9), color = color.text),
+      axis.text.y = element_text(size = rel(.9), color = color.text),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25),
 
       plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm")
     )
-
 }
 
 #' Theme 'bain'
@@ -255,46 +247,44 @@ theme_economist <- function(grid_lines = "vertical"){
 #'
 #' @return theme
 #' @export
-theme_bain <- function(grid_lines = "vertical"){
+theme_bain <- function(grid_lines = "vertical") {
+  color.background <- "#D5E2EA"
+  color.text <- "#201F1D"
+  color.text.title <- "#EE3324"
+  color.axis <- "#201F1D"
 
-  color.background = "#D5E2EA"
-  color.text = "#201F1D"
-  color.text.title = "#EE3324"
-  color.axis = "#201F1D"
-
-  if(grid_lines == "vertical"){
-    axis.line.x = element_line(color=color.axis, size=1)
-    axis.line.y = element_blank()
+  if (grid_lines == "vertical") {
+    axis.line.x <- element_line(color = color.axis, size = 1)
+    axis.line.y <- element_blank()
   } else {
-    axis.line.x = element_blank()
-    axis.line.y = element_line(color=color.axis, size=1)
+    axis.line.x <- element_blank()
+    axis.line.y <- element_line(color = color.axis, size = 1)
   }
 
-  theme_bw(base_size=12, base_family = fonts_selector("Helvetica","Arial", "sans", "sans-serif")) +
+  theme_bw(base_size = 12, base_family = fonts_selector("Helvetica", "Arial", "sans", "sans-serif")) +
     theme(
-      panel.background=element_rect(fill=NA, color=NA),
-      plot.background=element_rect(fill=NA, color=NA),
-      panel.border=element_rect(color=NA),
+      panel.background = element_rect(fill = NA, color = NA),
+      plot.background = element_rect(fill = NA, color = NA),
+      panel.border = element_rect(color = NA),
 
-      panel.grid.major=element_blank(),
-      panel.grid.minor=element_blank(),
-      axis.ticks=element_blank(),
-      axis.line.x=axis.line.x,
-      axis.line.y=axis.line.y,
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      axis.ticks = element_blank(),
+      axis.line.x = axis.line.x,
+      axis.line.y = axis.line.y,
 
-      legend.background = element_rect(fill=NA),
-      legend.key = element_rect(fill=NA, color=NA),
-      legend.text = element_text(size=rel(.7), color=color.text),
+      legend.background = element_rect(fill = NA),
+      legend.key = element_rect(fill = NA, color = NA),
+      legend.text = element_text(size = rel(.7), color = color.text),
 
-      plot.title=element_text(color=color.text.title, size=rel(1.2), face = "bold", hjust=0),
-      axis.text.x=element_text(size=rel(.9),color=color.text),
-      axis.text.y=element_text(size=rel(.9),color=color.text),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25),
+      plot.title = element_text(color = color.text.title, size = rel(1.2), face = "bold", hjust = 0),
+      axis.text.x = element_text(size = rel(.9), color = color.text),
+      axis.text.y = element_text(size = rel(.9), color = color.text),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25),
 
       plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm")
     )
-
 }
 
 
@@ -305,37 +295,37 @@ theme_bain <- function(grid_lines = "vertical"){
 #'
 #' @return theme
 #' @export
-theme_scientific <- function(){
-  palette <- c("#FFFFFF", "#F0F0F0", "#D9D9D9", "#BDBDBD", "#969696", "#737373",
-               "#525252", "#252525", "#000000") # = brewer.pal 'greys'
-  color.background = palette[2]
-  color.grid.major = palette[3]
-  color.axis.text = palette[6]
-  color.axis.title = palette[7]
-  color.title = palette[9]
-  color.axis = palette[5]
+theme_scientific <- function() {
+  palette <- c(
+    "#FFFFFF", "#F0F0F0", "#D9D9D9", "#BDBDBD", "#969696", "#737373",
+    "#525252", "#252525", "#000000"
+  ) # = brewer.pal 'greys'
+  color.background <- palette[2]
+  color.grid.major <- palette[3]
+  color.axis.text <- palette[6]
+  color.axis.title <- palette[7]
+  color.title <- palette[9]
+  color.axis <- palette[5]
 
-  theme_bw(base_size=12) +
+  theme_bw(base_size = 12) +
     theme(
+      panel.border = element_rect(color = color.background),
 
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid.major, size = .25, linetype = 2),
+      panel.grid.minor = element_blank(),
+      axis.line.x = element_line(color = color.axis),
+      axis.line.y = element_line(color = color.axis),
+      axis.ticks = element_line(color = color.axis),
 
-      panel.grid.major=element_line(color=color.grid.major,size=.25, linetype=2),
-      panel.grid.minor=element_blank(),
-      axis.line.x=element_line(color=color.axis),
-      axis.line.y=element_line(color=color.axis),
-      axis.ticks=element_line(color=color.axis),
+      legend.key = element_rect(fill = NA, color = NA),
+      legend.text = element_text(size = rel(.8), color = color.axis.title),
 
-      legend.key = element_rect(fill=NA, color=NA),
-      legend.text = element_text(size=rel(.8),color=color.axis.title),
-
-      plot.title=element_text(color=color.title, size=rel(1.2), hjust=.5),
-      axis.text.x=element_text(size=rel(.9),color=color.axis.text),
-      axis.text.y=element_text(size=rel(.9),color=color.axis.text),
-      axis.title.x=element_text(size=rel(1),color=color.axis.title, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.axis.title, vjust=1.25)
+      plot.title = element_text(color = color.title, size = rel(1.2), hjust = .5),
+      axis.text.x = element_text(size = rel(.9), color = color.axis.text),
+      axis.text.y = element_text(size = rel(.9), color = color.axis.text),
+      axis.title.x = element_text(size = rel(1), color = color.axis.title, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.axis.title, vjust = 1.25)
     )
-
 }
 
 
@@ -345,37 +335,35 @@ theme_scientific <- function(){
 #'
 #' @return theme
 #' @export
-theme_monokai <- function(){
-  color.background = "#272822"
-  color.grid.major = "#A59F85"
-  color.text = "#49483E"
-  color.axis = "#F9F8F5"
+theme_monokai <- function() {
+  color.background <- "#272822"
+  color.grid.major <- "#A59F85"
+  color.text <- "#49483E"
+  color.axis <- "#F9F8F5"
 
-  theme_bw(base_size=13) +
+  theme_bw(base_size = 13) +
     theme(
-
-      panel.background=element_rect(fill=color.background, color=color.background),
+      panel.background = element_rect(fill = color.background, color = color.background),
       # plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.grid.major=element_line(color=color.grid.major,size=.4, linetype=2),
-      panel.grid.minor=element_blank(),
-      axis.line.x=element_line(color=color.grid.major, size=1),
-      axis.line.y=element_line(color=color.grid.major, size=1),
-      axis.ticks=element_line(color=NA),
+      panel.grid.major = element_line(color = color.grid.major, size = .4, linetype = 2),
+      panel.grid.minor = element_blank(),
+      axis.line.x = element_line(color = color.grid.major, size = 1),
+      axis.line.y = element_line(color = color.grid.major, size = 1),
+      axis.ticks = element_line(color = NA),
 
       # legend.background = element_rect(fill=color.background),
-      legend.key = element_rect(fill=color.background, color=NA),
-      legend.text = element_text(size=rel(.8),color=color.text),#color.axis.title),
-      legend.title = element_text(color=color.text),
+      legend.key = element_rect(fill = color.background, color = NA),
+      legend.text = element_text(size = rel(.8), color = color.text), # color.axis.title),
+      legend.title = element_text(color = color.text),
 
-      plot.title=element_text(color=color.text, size=rel(1.2), hjust=.5),
-      axis.text.x=element_text(size=rel(.95),color=color.text),
-      axis.text.y=element_text(size=rel(.95),color=color.text),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25)
+      plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
+      axis.text.x = element_text(size = rel(.95), color = color.text),
+      axis.text.y = element_text(size = rel(.95), color = color.text),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25)
     )
-
 }
 
 #' Theme 'monokai_full'
@@ -384,37 +372,35 @@ theme_monokai <- function(){
 #'
 #' @return theme
 #' @export
-theme_monokai_full <- function(){
-  color.background = "#272822"
-  color.grid.major = "#A59F85"
-  color.text = "#F8F8F2"
-  color.axis = "#F9F8F5"
+theme_monokai_full <- function() {
+  color.background <- "#272822"
+  color.grid.major <- "#A59F85"
+  color.text <- "#F8F8F2"
+  color.axis <- "#F9F8F5"
 
-  theme_bw(base_size=13) +
+  theme_bw(base_size = 13) +
     theme(
+      panel.background = element_rect(fill = color.background, color = color.background),
+      plot.background = element_rect(fill = color.background, color = color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.background=element_rect(fill=color.background, color=color.background),
-      plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid.major, size = .4, linetype = 2),
+      panel.grid.minor = element_blank(),
+      axis.line.x = element_line(color = color.grid.major, size = 1),
+      axis.line.y = element_line(color = color.grid.major, size = 1),
+      axis.ticks = element_line(color = NA),
 
-      panel.grid.major=element_line(color=color.grid.major,size=.4, linetype=2),
-      panel.grid.minor=element_blank(),
-      axis.line.x=element_line(color=color.grid.major, size=1),
-      axis.line.y=element_line(color=color.grid.major, size=1),
-      axis.ticks=element_line(color=NA),
+      legend.background = element_rect(fill = color.background),
+      legend.key = element_rect(fill = color.background, color = NA),
+      legend.text = element_text(size = rel(.8), color = color.text), # color.axis.title),
+      legend.title = element_text(color = color.text),
 
-      legend.background = element_rect(fill=color.background),
-      legend.key = element_rect(fill=color.background, color=NA),
-      legend.text = element_text(size=rel(.8),color=color.text),#color.axis.title),
-      legend.title = element_text(color=color.text),
-
-      plot.title=element_text(color=color.text, size=rel(1.2), hjust=.5),
-      axis.text.x=element_text(size=rel(.95),color=color.text),
-      axis.text.y=element_text(size=rel(.95),color=color.text),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25)
+      plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
+      axis.text.x = element_text(size = rel(.95), color = color.text),
+      axis.text.y = element_text(size = rel(.95), color = color.text),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25)
     )
-
 }
 
 
@@ -425,37 +411,35 @@ theme_monokai_full <- function(){
 #'
 #' @return theme
 #' @export
-theme_flat <- function(){
-  color.background = "#ECF0F1"
-  color.text = "#2C3E50"
-  color.grid = "#BDC3C7"
-  color.axis.line = "#2C3E50"
+theme_flat <- function() {
+  color.background <- "#ECF0F1"
+  color.text <- "#2C3E50"
+  color.grid <- "#BDC3C7"
+  color.axis.line <- "#2C3E50"
 
-  theme_bw(base_size=13) +
+  theme_bw(base_size = 13) +
     theme(
+      panel.background = element_rect(fill = color.background, color = NA),
+      plot.background = element_rect(fill = color.background, color = color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.background=element_rect(fill=color.background, color=NA),
-      plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid, size = .3, linetype = 2),
+      panel.grid.minor = element_blank(),
+      axis.line.x = element_line(color = color.axis.line),
+      axis.line.y = element_line(color = color.axis.line),
+      axis.ticks = element_blank(),
 
-      panel.grid.major=element_line(color=color.grid,size=.3, linetype = 2),
-      panel.grid.minor=element_blank(),
-      axis.line.x=element_line(color=color.axis.line),
-      axis.line.y=element_line(color=color.axis.line),
-      axis.ticks=element_blank(),
+      legend.background = element_rect(fill = color.background),
+      legend.key = element_rect(fill = NA, color = NA),
+      legend.text = element_text(size = rel(.8), color = color.text),
+      legend.title = element_text(color = color.text),
 
-      legend.background = element_rect(fill=color.background),
-      legend.key = element_rect(fill=NA, color=NA),
-      legend.text = element_text(size=rel(.8),color=color.text),
-      legend.title = element_text(color=color.text),
-
-      plot.title=element_text(color=color.text, size=rel(1.2), hjust=.5),
-      axis.text.x=element_text(size=rel(.95),color=color.text),
-      axis.text.y=element_text(size=rel(.95),color=color.text),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25)
+      plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
+      axis.text.x = element_text(size = rel(.95), color = color.text),
+      axis.text.y = element_text(size = rel(.95), color = color.text),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25)
     )
-
 }
 
 #' Theme 'retro'
@@ -464,47 +448,45 @@ theme_flat <- function(){
 #'
 #' @return theme
 #' @export
-theme_retro <- function(){
-  color.background = "#ECF0F1"
-  color.text = "#2C3E50"
-  color.grid = "#2C3E50"
-  color.axis.line = "#2C3E50"
+theme_retro <- function() {
+  color.background <- "#ECF0F1"
+  color.text <- "#2C3E50"
+  color.grid <- "#2C3E50"
+  color.axis.line <- "#2C3E50"
 
-  theme_bw(base_size=12, base_family = fonts_selector("Times New Roman", "Times", "serif")) +
+  theme_bw(base_size = 12, base_family = fonts_selector("Times New Roman", "Times", "serif")) +
     theme(
+      panel.background = element_rect(fill = color.background, color = NA),
+      plot.background = element_rect(fill = color.background, color = color.background),
+      panel.border = element_rect(color = color.background),
 
-      panel.background=element_rect(fill=color.background, color=NA),
-      plot.background=element_rect(fill=color.background, color=color.background),
-      panel.border=element_rect(color=color.background),
+      panel.grid.major = element_line(color = color.grid, size = .2, linetype = 2),
+      panel.grid.minor = element_blank(),
+      axis.line.x = element_line(color = color.axis.line),
+      axis.line.y = element_line(color = color.axis.line),
+      axis.ticks = element_blank(),
 
-      panel.grid.major=element_line(color=color.grid,size=.2, linetype = 2),
-      panel.grid.minor=element_blank(),
-      axis.line.x=element_line(color=color.axis.line),
-      axis.line.y=element_line(color=color.axis.line),
-      axis.ticks=element_blank(),
+      legend.background = element_rect(fill = color.background),
+      legend.key = element_rect(fill = NA, color = NA),
+      legend.text = element_text(size = rel(.8), color = color.text),
+      legend.title = element_text(color = color.text),
 
-      legend.background = element_rect(fill=color.background),
-      legend.key = element_rect(fill=NA, color=NA),
-      legend.text = element_text(size=rel(.8),color=color.text),
-      legend.title = element_text(color=color.text),
-
-      plot.title=element_text(color=color.text, size=rel(1.2), hjust=.5),
-      axis.text.x=element_text(size=rel(.95),color=color.text),
-      axis.text.y=element_text(size=rel(.95),color=color.text),
-      axis.title.x=element_text(size=rel(1),color=color.text, vjust=0),
-      axis.title.y=element_text(size=rel(1),color=color.text, vjust=1.25)
+      plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
+      axis.text.x = element_text(size = rel(.95), color = color.text),
+      axis.text.y = element_text(size = rel(.95), color = color.text),
+      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
+      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25)
     )
-
 }
 
 #' A completely blank theme
 #'
 #' @return theme
 #' @export
-theme_empty<-function(){
+theme_empty <- function() {
   theme_minimal() +
     theme(
-      plot.title=element_text(hjust=.5),
+      plot.title = element_text(hjust = .5),
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank()
     )
