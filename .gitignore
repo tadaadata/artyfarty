@@ -29,6 +29,3 @@ vignettes/*.pdf
 *.knit.md
 /*.html
 
-#############
-
-meta.R

@@ -1,7 +1,7 @@
 Type: Package
 Package: artyfarty
 Title: Themes for ggplot2
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: 
     c(person(given = "Bart",
              family = "Smeets",
