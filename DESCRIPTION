@@ -1,23 +1,36 @@
-Package: artyfarty
 Type: Package
+Package: artyfarty
 Title: Themes for ggplot2
 Version: 0.0.1
-Authors@R: person("Bart","Smeets", email="bartsmeets86@gmail.com", role=c("aut","cre"))
-Description: A combination of ggplot2 themes, palettes and convenience functions.
+Authors@R: 
+    c(person(given = "Bart",
+             family = "Smeets",
+             role = "aut",
+             email = "bartsmeets86@gmail.com"),
+      person(given = "Lukas",
+             family = "Burk",
+             role = c("aut", "cre"),
+             email = "lukas@quantenbrot.de",
+             comment = c(ORCID = "https://orcid.org/0000-0001-7528-3795")))
+Description: A combination of ggplot2 themes, palettes and
+    convenience functions.
 License: MIT + file LICENSE
-LazyData: TRUE
 Imports:
-    grid,
-    tidyr,
     dplyr,
     ggplot2,
     grDevices,
-    jsonlite
+    grid,
+    jsonlite,
+    tidyr,
+    magrittr
 Suggests:
     knitr,
-    rmarkdown,
     RColorBrewer,
     readbitmap,
+    rmarkdown,
     testthat
-VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+VignetteBuilder: 
+    knitr
+LazyData: TRUE
+Encoding: UTF-8
+RoxygenNote: 6.1.1

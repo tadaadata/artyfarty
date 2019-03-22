@@ -28,3 +28,7 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 /*.html
+
+#############
+
+meta.R

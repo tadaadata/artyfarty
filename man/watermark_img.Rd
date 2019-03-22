@@ -4,7 +4,8 @@
 \alias{watermark_img}
 \title{Add a watermark image}
 \usage{
-watermark_img(filename, x, y, width = 32, location = "br", alpha = 1, ...)
+watermark_img(filename, x, y, width = 32, location = "br", alpha = 1,
+  ...)
 }
 \arguments{
 \item{filename}{the filename of the}

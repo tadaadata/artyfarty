@@ -1,10 +1,33 @@
-language: r
+language: R
+sudo: true
 cache: packages
+dist: xenial
 
 env: _R_CHECK_CRAN_INCOMING_=FALSE
 
-r_github_packages:
-  - jimhester/covr
+r_binary_packages:
+  - testthat
+  - jsonlite
+  - git2r
+  - ps
+  - processx
+  - httr
+  - dplyr
+  - lubridate
+  - purrr
+  - stringr
+  - ggplot2
+  - knitr
+  - rmarkdown
+  - commonmark
+  - highlight
+  - xml2
+  - roxygen2
+
+r:
+  - oldrel
+  - release
+  - devel
 
 after_success:
-  - Rscript -e 'library(covr);codecov()'
+  - Rscript -e 'covr::codecov()'
