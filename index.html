@@ -89,7 +89,16 @@
 <div id="fork-notice" class="section level2">
 <h2 class="hasAnchor">
 <a href="#fork-notice" class="anchor"></a>Fork notice</h2>
-<p>The original package has not been in active development for &gt;= 2 years, and since then, some things have changes. This fork aims to bring the themes up to speed with regard to missing features, like setting fonts/colors for the <code>subtitle</code> ggplot2 elements missing in the original package.</p>
+<p>The original package has not been in active development for &gt;= 2 years, and since then some things have changed. This fork aims to bring the themes up to speed with regard to missing features, like setting fonts/colors for the <code>subtitle</code> ggplot2 elements missing in the original package.</p>
+<div id="goals" class="section level3">
+<h3 class="hasAnchor">
+<a href="#goals" class="anchor"></a>Goals</h3>
+<ul>
+<li>Make all themes work with ggplot2 features currently missing (subtitle, caption). See <a href="https://github.com/tadaadata/artyfarty/issues/1">#1</a>
+</li>
+<li>Convert manual palettes (<code><a href="reference/pal.html">pal()</a></code>) to proper <code>scale_[color|fill]_palette</code> functions. The idea is to be consistent with theme packages like <code>hrbthemes</code> (&lt;3)</li>
+</ul>
+</div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
