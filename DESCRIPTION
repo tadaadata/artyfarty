@@ -28,7 +28,8 @@ Suggests:
     RColorBrewer,
     readbitmap,
     rmarkdown,
-    testthat
+    testthat,
+    covr
 VignetteBuilder: 
     knitr
 LazyData: TRUE
