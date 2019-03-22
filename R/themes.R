@@ -359,6 +359,8 @@ theme_monokai <- function() {
       legend.title = element_text(color = color.text),
 
       plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
+      plot.subtitle = element_text(color = color.text),
+      plot.caption = element_text(color = color.text),
       axis.text.x = element_text(size = rel(.95), color = color.text),
       axis.text.y = element_text(size = rel(.95), color = color.text),
       axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
@@ -396,6 +398,8 @@ theme_monokai_full <- function() {
       legend.title = element_text(color = color.text),
 
       plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
+      plot.subtitle = element_text(color = color.text),
+      plot.caption = element_text(color = color.text),
       axis.text.x = element_text(size = rel(.95), color = color.text),
       axis.text.y = element_text(size = rel(.95), color = color.text),
       axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
