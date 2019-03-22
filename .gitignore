@@ -1,9 +1,10 @@
+docs
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 inst/doc
-=======
+# =======
 # History files
 .Rapp.history
 
@@ -28,4 +29,3 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 /*.html
-
