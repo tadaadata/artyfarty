@@ -23,7 +23,7 @@ library(ggplot2)
 `artyfarty` is a __work in progress__. For now you can install the development version using `devtools`.
 
 ```{r, eval=FALSE}
-devtools::install_github('datarootsio/artyfarty')
+devtools::install_github("datarootsio/artyfarty")
 ```
 
 # Available themes
@@ -33,18 +33,16 @@ devtools::install_github('datarootsio/artyfarty')
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_dataroots() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("dataroots"))
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_dataroots() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("dataroots"))
-
-
 ```
  
 ## farty
@@ -52,18 +50,16 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_farty() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("flat"))
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_farty() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("flat"))
-
-
 ```
 
 ## scientific
@@ -71,17 +67,16 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_scientific() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("five38"))
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_scientific() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("five38"))
-
 ```
 
 ## monokai
@@ -89,18 +84,17 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_monokai() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("monokai"))
 
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_monokai() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("monokai"))
-
 ```
 
 ## monokai_full
@@ -108,18 +102,17 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_monokai_full() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("monokai"))
 
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_monokai_full() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("monokai"))
-
 ```
 
 
@@ -128,60 +121,34 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_flat() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("flat"))
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_flat() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("flat"))
-
 ```
 
-## five38
-
-```{r}
-
-ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
-  theme_five38() +
-  ggtitle("Sparkly stones") +
-  scale_fill_manual(values = pal("five38"))
-
-ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
-  theme_five38(grid_lines = "horizontal") +
-  ggtitle("Sparkly stones") +
-  scale_fill_manual(values = pal("five38")) +
-  coord_flip()
-
-ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
-  theme_five38() +
-  ggtitle("Vroom") +
-  scale_color_manual(values = pal("five38"))
-
-```
 
 ## retro
 
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_retro() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("retro"))
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_retro() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("retro"))
-
 ```
 
 ## ft
@@ -189,24 +156,23 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_ft() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("ft"))
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_ft(grid_lines = "horizontal") +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("ft")) +
   coord_flip()
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_ft() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("ft"))
-
 ```
 
 ## bain
@@ -214,49 +180,23 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_bain() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("bain"))
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_bain(grid_lines = "horizontal") +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("bain")) +
   coord_flip()
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_bain() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("bain"))
-
-```
-
-## economist
-
-```{r}
-
-ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
-  theme_economist() +
-  ggtitle("Sparkly stones") +
-  scale_fill_manual(values = pal("economist"))
-
-ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
-  theme_economist(grid_lines = "horizontal") +
-  ggtitle("Sparkly stones") +
-  scale_fill_manual(values = pal("economist")) +
-  coord_flip()
-
-ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
-  theme_economist() +
-  ggtitle("Vroom") +
-  scale_color_manual(values = pal("economist"))
-
 ```
 
 ## empty
@@ -264,17 +204,16 @@ ggplot(mtcars) +
 ```{r}
 
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_empty() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("flat"))
 
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_empty() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("flat"))
-
 ```
 
 # Palettes
@@ -293,26 +232,26 @@ A watermark might not add much value to a plot, but there are times that you jus
 
 ```{r}
 ggplot(diamonds) +
-  geom_bar(aes(cut, fill=cut)) +
+  geom_bar(aes(cut, fill = cut)) +
   theme_retro() +
   ggtitle("Sparkly stones") +
   scale_fill_manual(values = pal("retro")) +
-  watermark_img("Rlogo.png", location="tl", alpha=.5)
+  watermark_img("Rlogo.png", location = "tl", alpha = .5)
 ```
 
 ```{r}
 ggplot(mtcars) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_ft() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("ft")) +
-  watermark_txt("watermark", location="br")
+  watermark_txt("watermark", location = "br")
 ```
 
 ```{r}
 ggplot(mtcars) +
-  watermark_txt("watermark", location="center", rot=45, fontsize=36, alpha=.2) +
-  geom_point(aes(x=wt, y=qsec, color=as.factor(cyl))) +
+  watermark_txt("watermark", location = "center", rot = 45, fontsize = 36, alpha = .2) +
+  geom_point(aes(x = wt, y = qsec, color = as.factor(cyl))) +
   theme_ft() +
   ggtitle("Vroom") +
   scale_color_manual(values = pal("ft"))

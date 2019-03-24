@@ -1,3 +1,5 @@
+^Meta$
+^doc$
 ^meta\.R$
 ^_pkgdown\.yml$
 ^codecov\.yml$
