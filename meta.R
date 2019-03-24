@@ -34,3 +34,5 @@ p <- ggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +
 p + scale_color_manual(values = pal("monokai")) +
   theme_monokai_full()
 
+p + scale_color_manual(values = pal("monokai")) +
+  hrbrthemes::theme_modern_rc()

@@ -2,6 +2,9 @@
 
 This is now a fork of [datarootsio/artyfarty](https://github.com/datarootsio/artyfarty), the Tadaa, Data! way.
 
+- Remove superfluous themes:
+    - `theme_five38` -> use `ggthemes::theme_fivethirtyeight()`
+    - `theme_economist` -> use `ggthemes::theme_economist()`
 - Plot all current themes in `README.Rmd`.
 - Move `pkgdown` to `gh-pages` branch and auto-deploy via travis-ci.
 - `usethis::use_`

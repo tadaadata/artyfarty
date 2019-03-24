@@ -81,54 +81,6 @@ theme_farty <- function() {
 }
 
 
-#' Theme 'five38'
-#'
-#' A theme inspired by http://fivethirtyeight.com/
-#'
-#' @param grid_lines the direction of the grid lines, either \code{vertical} or \code{horizontal}
-#'
-#' @return theme
-#' @export
-theme_five38 <- function(grid_lines = "vertical") {
-  color.background <- "#F0F0F0"
-  color.grid.major <- "#D3D3D3"
-  color.text <- "#181818"
-
-  if (grid_lines == "vertical") {
-    grid.major.x <- element_blank()
-    grid.major.y <- element_line()
-  } else {
-    grid.major.x <- element_line()
-    grid.major.y <- element_blank()
-  }
-
-  theme_bw(base_size = 13, base_family = fonts_selector("Helvetica", "Arial", "sans", "sans-serif")) +
-    theme(
-      panel.background = element_rect(fill = color.background, color = color.background),
-      plot.background = element_rect(fill = color.background, color = color.background),
-      panel.border = element_rect(color = color.background),
-
-      panel.grid.major = element_line(color = color.grid.major, size = .25),
-      panel.grid.major.x = grid.major.x,
-      panel.grid.major.y = grid.major.y,
-      panel.grid.minor = element_blank(),
-      axis.ticks = element_blank(),
-
-      legend.background = element_rect(fill = color.background),
-      legend.key = element_rect(fill = color.background, color = NA),
-      legend.text = element_text(size = rel(.8), color = color.text),
-
-      plot.title = element_text(color = color.text, size = rel(1.2), hjust = .5),
-      axis.text.x = element_text(size = rel(.95), color = color.text),
-      axis.text.y = element_text(size = rel(.95), color = color.text, face = "bold"),
-      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
-      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25),
-
-      plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm")
-    )
-}
-
-
 #' Theme 'ft'
 #'
 #' A theme inspired by https://www.ft.com/
@@ -169,67 +121,6 @@ theme_ft <- function(grid_lines = "vertical") {
       legend.position = "top",
 
       plot.title = element_text(color = color.text, size = rel(1.4), face = "bold", hjust = .5),
-      axis.text.x = element_text(size = rel(.9), color = color.text),
-      axis.text.y = element_text(size = rel(.9), color = color.text),
-      axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),
-      axis.title.y = element_text(size = rel(1), color = color.text, vjust = 1.25),
-
-      plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm")
-    )
-}
-
-
-
-#' Theme 'economist'
-#'
-#' A theme inspired by https://www.ft.com/
-#'
-#' @param grid_lines the direction of the grid lines, either \code{vertical} or \code{horizontal}
-#'
-#' @return theme
-#' @export
-theme_economist <- function(grid_lines = "vertical") {
-  color.background <- "#D5E2EA"
-  color.grid.major <- "#ECF2F5"
-  color.text <- "#181818"
-  color.axis <- "#181818"
-
-  if (grid_lines == "vertical") {
-    grid.major.x <- element_blank()
-    grid.major.y <- element_line()
-    axis.ticks.y <- element_blank()
-    axis.ticks.x <- element_line(color = color.axis)
-    axis.line.x <- element_line(color = color.axis)
-    axis.line.y <- element_blank()
-  } else {
-    grid.major.x <- element_line()
-    grid.major.y <- element_blank()
-    axis.ticks.y <- element_line(color = color.axis)
-    axis.ticks.x <- element_blank()
-    axis.line.x <- element_blank()
-    axis.line.y <- element_line(color = color.axis)
-  }
-
-  theme_bw(base_size = 12, base_family = fonts_selector("Verdana", "Geneva", "sans-serif", "sans")) +
-    theme(
-      panel.background = element_rect(fill = color.background, color = color.background),
-      plot.background = element_rect(fill = color.background, color = color.background),
-      panel.border = element_rect(color = color.background),
-
-      panel.grid.major = element_line(color = color.grid.major, size = 1.05),
-      panel.grid.major.x = grid.major.x,
-      panel.grid.major.y = grid.major.y,
-      panel.grid.minor = element_blank(),
-      axis.ticks.y = axis.ticks.y,
-      axis.ticks.x = axis.ticks.x,
-      axis.line.x = axis.line.x,
-      axis.line.y = axis.line.y,
-
-      legend.background = element_rect(fill = color.background),
-      legend.key = element_rect(fill = color.background, color = color.background),
-      legend.text = element_text(size = rel(.7), color = color.text),
-
-      plot.title = element_text(color = color.text, size = rel(1.3), face = "bold", hjust = 0),
       axis.text.x = element_text(size = rel(.9), color = color.text),
       axis.text.y = element_text(size = rel(.9), color = color.text),
       axis.title.x = element_text(size = rel(1), color = color.text, vjust = 0),

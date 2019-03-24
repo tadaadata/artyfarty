@@ -13,5 +13,5 @@ palette_info(palette_name)
 Show details of specific palette
 }
 \examples{
-palette_info('flatpaleta')
+palette_info("flatpaleta")
 }

@@ -62,7 +62,7 @@ for (theme in sort(themes)) {
 }
 ```
 
-<img src="man/figures/README-theme_preview-1.png" width="100%" /><img src="man/figures/README-theme_preview-2.png" width="100%" /><img src="man/figures/README-theme_preview-3.png" width="100%" /><img src="man/figures/README-theme_preview-4.png" width="100%" /><img src="man/figures/README-theme_preview-5.png" width="100%" /><img src="man/figures/README-theme_preview-6.png" width="100%" /><img src="man/figures/README-theme_preview-7.png" width="100%" /><img src="man/figures/README-theme_preview-8.png" width="100%" /><img src="man/figures/README-theme_preview-9.png" width="100%" /><img src="man/figures/README-theme_preview-10.png" width="100%" /><img src="man/figures/README-theme_preview-11.png" width="100%" /><img src="man/figures/README-theme_preview-12.png" width="100%" />
+<img src="man/figures/README-theme_preview-1.png" width="100%" /><img src="man/figures/README-theme_preview-2.png" width="100%" /><img src="man/figures/README-theme_preview-3.png" width="100%" /><img src="man/figures/README-theme_preview-4.png" width="100%" /><img src="man/figures/README-theme_preview-5.png" width="100%" /><img src="man/figures/README-theme_preview-6.png" width="100%" /><img src="man/figures/README-theme_preview-7.png" width="100%" /><img src="man/figures/README-theme_preview-8.png" width="100%" /><img src="man/figures/README-theme_preview-9.png" width="100%" /><img src="man/figures/README-theme_preview-10.png" width="100%" />
 
 ## Code of Conduct
 
